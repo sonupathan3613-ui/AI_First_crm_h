@@ -8,4 +8,7 @@ def log_interaction(data: dict):
 
 @app.post("/ai/edit_interaction")
 def edit_interaction(data: dict):
-    return langgraph_agent.agent.run("Edit Interaction", (data["id"], data["text"]))
+    return langgraph_agent.agent.run("Edit Interaction", (data["id"], data["text"]))  
+@app.get("/app")
+def display():
+    return 'happy'
